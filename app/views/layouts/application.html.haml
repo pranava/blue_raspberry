@@ -1,0 +1,83 @@
+!!!
+%html
+  %head
+    %title UC Berkeley IEEE
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .wrapper
+      .header
+        .logo-cal.vertically-centered
+        .navigation
+          %ul
+            %li.main
+              %a{:href => "#"} EVENTS
+            %li.option
+              %a{:href => "#"} All Events
+            %li.option
+              %a{:href => "#"} Calendar
+            %li.option &nbsp
+            %li.option &nbsp
+
+          %ul
+            %li.main
+              %a{:href => "#"} INDUSTRY
+            %li.option
+              %a{:href => "#"} Information
+            %li.option
+              %a{:href => "#"} Sponsors
+            %li.option
+              %a{:href => "#"} Donate
+            %li.option &nbsp
+
+          %ul
+            %li.main
+              %a{:href => "#"} H.O.P.E
+            %li.option
+              %a{:href => "#"} About
+            %li.option
+              %a{:href => "#"} Programs
+            %li.option
+              %a{:href => "#"} Resources
+            %li.option
+              %a{:href => "#"} FAQ
+
+          %ul  
+            %li.main
+              %a{:href => "#"} ABOUT
+            %li.option
+              %a{:href => "#"} Information
+            %li.option
+              %a{:href => "#"} Officers
+            %li.option
+              %a{:href => "#"} Advisor
+            %li.option
+              %a{:href => "#"} Contact
+
+          %ul  
+            %li.main
+              %a{:href => "#"} LOGIN
+            %li.option
+              %a{:href => "#"} Officer
+            %li.option
+              %a{:href => "#"} Sponsor
+            %li.option &nbsp
+            %li.option &nbsp
+
+      .hero
+      .content
+        = yield
+
+      .push
+    .footer-wrapper
+      .footer
+        .copyright.vertically-centered
+          .logo-national
+          %p 2013 UC Berkeley IEEE
+        .media.vertically-centered
+          %form
+            %input{:placeholder => "Enter email to join our mailing list"}
+            %button.icon{:type => "submit"}
+              %span.icon-heart{"aria-hidden" => "true"}
+          %p No spam. We promise.

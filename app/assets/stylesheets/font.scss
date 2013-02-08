@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: font-url("opensans/OpenSans-Regular-webfont.eot");
+  src: font-url("opensans/OpenSans-Regular-webfont.eot?#iefix") format('embedded-opentype'),
+       font-url("opensans/OpenSans-Regular-webfont.woff") format('woff'),
+       font-url("opensans/OpenSans-Regular-webfont.ttf") format('truetype'),
+       font-url("opensans/OpenSans-Regular-webfont.svg#OpenSansRegular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSansItalic';
+  src: font-url("opensans/OpenSans-Italic-webfont.eot");
+  src: font-url("opensans/OpenSans-Italic-webfont.eot?#iefix") format('embedded-opentype'),
+       font-url("opensans/OpenSans-Italic-webfont.woff") format('woff'),
+       font-url("opensans/OpenSans-Italic-webfont.ttf") format('truetype'),
+       font-url("opensans/OpenSans-Italic-webfont.svg#OpenSansItalic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSansSemibold';
+  src: font-url("opensans/OpenSans-Semibold-webfont.eot");
+  src: font-url("opensans/OpenSans-Semibold-webfont.eot?#iefix") format('embedded-opentype'),
+       font-url("opensans/OpenSans-Semibold-webfont.woff") format('woff'),
+       font-url("opensans/OpenSans-Semibold-webfont.ttf") format('truetype'),
+       font-url("opensans/OpenSans-Semibold-webfont.svg#OpenSansSemibold") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'blue-raspberry';
+  src: font-url("blue-raspberry/blue-raspberry.eot");
+  src: font-url("blue-raspberry/blue-raspberry.eot?#iefix") format('embedded-opentype'),
+       font-url("blue-raspberry/blue-raspberry.woff") format('woff'),
+       font-url("blue-raspberry/blue-raspberry.ttf") format('truetype'),
+       font-url("blue-raspberry/blue-raspberry.svg#blue-raspberry") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'blue-raspberry';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  opacity: 0.8;
+/* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+/* Animation center compensation - magrins should be symmetric */
+/* remove if not needed */
+  margin-left: 0.2em;
+/* you can be more comfortable with increased icons size */
+/* font-size: 120%; */
+/* Uncomment for 3D effect */
+/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-heart:before { content: '\2665'; } /* '♥' */
+.icon-location:before { content: '\e724'; } /* '' */
+.icon-attach:before { content: '📎'; } /* '\1f4ce' */
+.icon-clock:before { content: '🕔'; } /* '\1f554' */

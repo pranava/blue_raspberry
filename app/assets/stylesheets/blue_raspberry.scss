@@ -1,0 +1,168 @@
+$desired-width:   1280px;
+$minimum-width:   1024px;
+$content-width:   968px;
+
+$header-height:   150px;
+$footer-height:   150px;
+
+$hero-height:     367px;
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'OpenSansRegular';
+  font-size: 14px;
+
+  background-color: #FAFAFA;
+  background-image: image-url('bg_container.png');
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+.wrapper {
+  max-width: $desired-width;
+  min-width: $minimum-width;
+  background-color: #FFFFFF;
+
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -1 * $footer-height;
+}
+
+.footer-wrapper, .push {
+  height: $footer-height;
+}
+
+.footer-wrapper {
+  background-color: #2F3337;
+  color: #FFFFFF;
+
+  max-width: $desired-width;
+  min-width: $minimum-width;
+  margin: 0px auto;
+}
+
+@mixin viewable-content {
+  width: $content-width;
+  margin: 0px auto;
+}
+
+.header {
+  @include viewable-content;
+  height: $header-height;
+
+  .logo-cal {
+    width: 287px;
+    height: 120px;
+    float: left;
+
+    background-image: image-url('logo_main.png');
+  }
+
+  .navigation {
+    font-size: 12px;
+    float: right;
+    margin-top: 100px;
+    color: #98A1AA;
+
+    &:hover ul {
+      background-color: #FFFFFF;
+    }
+    
+    &:hover li.option {
+      opacity: 1;
+    }
+    
+    ul {
+      display: block;
+      float: left;
+      padding: 0 20px 20px 20px;
+
+      li.main {
+        font-family: 'OpenSansSemibold';
+        padding-bottom: 20px;
+      }
+
+      li.option {
+        opacity: 0;
+      }
+
+      li {
+        list-style-type: none;
+        padding-bottom: 8px;
+
+        a {
+          text-decoration: none;
+          color: #7B858F;
+        }
+
+        a:hover {
+          color: #2F3337;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  max-width: $desired-width;
+  min-width: $minimum-width;
+  height: $hero-height;
+
+  background-image: image-url("hero/home.png");
+  background-position: center center;
+}
+
+.content {
+  @include viewable-content;
+  padding-top: 43px;
+}
+
+.footer {
+  @include viewable-content;
+  height: $footer-height;
+  font-size: 12px;
+
+  .copyright {
+    float: left;
+    text-align: center;
+
+    .logo-national {
+      width: 128px;
+      height: 37px;
+      margin-bottom: 5px;
+      background-image: image-url('logo_kite.png');
+    }
+  }
+
+  .media {
+    float: right;
+
+  }
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  padding: 0 10px 0 10px;
+  
+  font-family: inherit;
+  border: 2px solid #98A1AA; 
+}
+
+button.icon {
+  border: solid 0px;
+  background-color: #98A1AA;
+  color: #FFFFFF;
+  margin-left: -5px;
+
+  height: 34px;
+  width: 34px;
+}

@@ -5,6 +5,11 @@ BlueRaspberry::Application.routes.draw do
 
   root :to => 'home#index'
 
+  scope "/about", :as => :about do
+    get  '/', to: 'about#index', as: :index
+    get  '/advisor', to: 'about#advisor', as: :advisor
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

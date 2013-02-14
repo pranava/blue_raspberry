@@ -9,6 +9,7 @@
     .wrapper
       .header
         .logo-cal.vertically-centered
+          = link_to image_tag('logo_main.png'), :root
         .navigation
           %ul
             %li.main
@@ -45,7 +46,7 @@
 
           %ul  
             %li.main
-              %a{:href => "#"} ABOUT
+              = link_to "ABOUT", :about_index
             %li.option
               %a{:href => "#"} Information
             %li.option
@@ -64,16 +65,14 @@
               %a{:href => "#"} Sponsor
             %li.option &nbsp
             %li.option &nbsp
-
-      .hero
-      .content
-        = yield
+      = render "preamble"
 
       .push
     .footer-wrapper
       .footer
         .copyright.vertically-centered
           .logo-national
+            = link_to image_tag('logo_kite.png'), :root
           %p 2013 UC Berkeley IEEE
         .media.vertically-centered
           %form

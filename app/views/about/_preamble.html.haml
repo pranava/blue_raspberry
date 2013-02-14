@@ -1,0 +1,18 @@
+.hero{:style => "background-image: url(#{image_path "hero/about.png"})"}
+.submenu
+  %ul
+    %li{:class => params[:action] == "index" ? "current" : ""}
+      = link_to "Information", :about_index
+
+    %li{:class => params[:action] == "officers" ? "current" : ""}
+      %a{:href => "#"} Officers
+
+    %li{:class => params[:action] == "advisor" ? "current" : ""}
+      = link_to "Advisor", :about_advisor
+
+    %li{:class => params[:action] == "contact" ? "current" : ""}
+      %a{:href => "#"} Contact Us
+
+    %li.page ABOUT
+.content
+  = yield

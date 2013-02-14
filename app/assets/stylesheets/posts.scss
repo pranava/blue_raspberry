@@ -1,0 +1,57 @@
+.post {
+  display: block;
+  overflow: auto;
+  margin-top: 50px;
+
+  span {
+    display: block;
+  }
+
+  span.icon {
+    display: inline;
+    color: #7B858F;
+    margin-right: 10px;
+  }
+
+  .date {
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    color: #FFFFFF;
+    float: left;
+
+    background-image: image-url("date.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    span.number {
+      font-family: 'OpenSansItalic';
+      font-size: 36px;
+      padding-top: 5px;
+    }
+
+    span.month {
+      margin-top: -7px;
+      font-size: 14px;
+    }
+  }
+
+  .www {
+    float: left;
+    width: 400px;
+    margin-left: 48px;
+
+    span {
+      margin-bottom: 15px;
+    }
+
+    span.event-title {
+      font-size: 24px;
+    }
+
+    span.event-location, span.event-time {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+  }
+}

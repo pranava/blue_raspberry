@@ -25,6 +25,10 @@ body {
   background-position: center;
 }
 
+p {
+  text-align: justify;
+}
+
 .wrapper {
   max-width: $desired-width;
   min-width: $minimum-width;
@@ -62,12 +66,10 @@ body {
     width: 287px;
     height: 120px;
     float: left;
-
-    background-image: image-url('logo_main.png');
   }
 
   .navigation {
-    font-size: 12px;
+    font-size: 14px;
     float: right;
     margin-top: 100px;
     color: #98A1AA;
@@ -120,9 +122,61 @@ body {
   background-position: center center;
 }
 
+.submenu {
+  max-width: $desired-width;
+  min-width: $minimum-width;
+  height: 70px;
+  color: #FFFFFF;
+
+  background-color: #7B858F;
+
+  ul {
+    @include viewable-content;
+    list-style-type:none;
+    line-height: 70px;
+    padding: 0px;
+
+    li {
+      float: left;
+      margin-right: 125px;
+      font-size: 18px;
+      font-family: 'OpenSansLight';
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    li.current {
+      background-image: image-url("current.png");
+      background-position: center bottom;
+      background-repeat: no-repeat;
+    }
+
+    li.page {
+      font-size: 24px;
+      margin-right: 0px;
+      float: right;
+      font-family: 'OpenSansSemibold';
+    }
+  }
+}
+
 .content {
   @include viewable-content;
-  padding-top: 43px;
+  padding: 43px 0 43px 0;
+  overflow: auto;
+
+  .left {
+    width: 570px;
+    float: left;
+  }
+
+  .right {
+    width: 342px;
+    float: right;
+  }
 }
 
 .footer {
@@ -138,13 +192,11 @@ body {
       width: 128px;
       height: 37px;
       margin-bottom: 5px;
-      background-image: image-url('logo_kite.png');
     }
   }
 
   .media {
     float: right;
-
   }
 }
 
@@ -162,7 +214,13 @@ button.icon {
   background-color: #98A1AA;
   color: #FFFFFF;
   margin-left: -5px;
+  cursor: pointer;
 
   height: 34px;
   width: 34px;
+}
+
+span.heading {
+  color: #1A5298;
+  font-size: 27px;
 }

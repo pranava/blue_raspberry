@@ -64,8 +64,12 @@ p {
 
   .logo-cal {
     width: 287px;
-    height: 120px;
+    height: 122px;
     float: left;
+
+    img {
+      border: 0px;
+    }
   }
 
   .navigation {
@@ -136,16 +140,16 @@ p {
     line-height: 70px;
     padding: 0px;
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     li {
       float: left;
       margin-right: 125px;
       font-size: 18px;
       font-family: 'OpenSansLight';
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
     }
 
     li.current {
@@ -192,6 +196,10 @@ p {
       width: 128px;
       height: 37px;
       margin-bottom: 5px;
+
+      img {
+        border: 0px;
+      }
     }
   }
 
@@ -210,7 +218,7 @@ input {
 }
 
 button.icon {
-  border: solid 0px;
+  border: 0px;
   background-color: #98A1AA;
   color: #FFFFFF;
   margin-left: -5px;
@@ -221,6 +229,9 @@ button.icon {
 }
 
 span.heading {
-  color: #1A5298;
   font-size: 27px;
+}
+
+.blue {
+  color: #1A5298;
 }

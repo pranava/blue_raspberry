@@ -33,8 +33,17 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Token authenticatable
       # t.string :authentication_token
 
+      ## User fields
+      t.string :first_name
+      t.string :last_name
+      t.string :biography
+      t.integer :graduation_year
 
+      t.attachment :face
       t.timestamps
+
+      ## Permissions
+      t.boolean :is_administrator, :default => false
     end
 
     add_index :users, :email,                :unique => true

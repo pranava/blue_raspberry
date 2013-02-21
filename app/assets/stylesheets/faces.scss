@@ -1,0 +1,62 @@
+$tile-width:  142px;
+$tile-height: 142px;
+$about-width: $tile-width * 2;
+$grid-width:  4;
+
+@mixin tile-properties($width: $tile-width) {
+    margin: 0px;
+    width : $width;
+    height: $tile-height;
+    float: left;
+  }
+
+#face-grid {
+  display: block;
+  background-color: #7B858F;
+  width:  $tile-width * $grid-width;
+
+  .tile {
+    @include tile-properties;
+
+    .salutation {
+      background-color: #E0E0E0;
+      height: $tile-height;
+      position: relative;
+
+      @mixin align {
+        position: absolute;
+        bottom: 10px;
+      }
+
+      span {
+        display: block;
+      }
+
+      .rank {
+        font-style: italic;
+      }
+
+      .left {
+        @include align;
+        left: 10px;
+        text-align: left;
+      }
+
+      .right {
+        @include align;
+        right: 10px;
+        text-align: right;
+      }
+    }
+  }
+
+  .dark {
+    @include tile-properties;
+    background-color: #2F3337;
+  }
+
+  .about {
+    @include tile-properties($about-width);
+    width: $about-width;
+  }
+}

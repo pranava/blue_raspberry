@@ -1,0 +1,10 @@
+.hero{:style => "background-image: url(#{image_path "hero/login.png"})"}
+
+.submenu
+  %ul
+    = link_to :new_user_session do
+      %li{:class => params[:action] == "new" ? "current" : ""} Officer
+
+    %li.page LOGIN
+.content
+  = yield

@@ -1,17 +1,17 @@
 .hero{:style => "background-image: url(#{image_path "hero/about.png"})"}
 .submenu
   %ul
-    %li{:class => params[:action] == "index" ? "current" : ""}
-      = link_to "Information", :about_index
+    = link_to :about_index do
+      %li{:class => params[:action] == "index" ? "current" : ""} Information
 
-    %li{:class => params[:action] == "officers" ? "current" : ""}
-      %a{:href => "#"} Officers
+    = link_to :about_officers do
+      %li{:class => params[:action] == "officers" ? "current" : ""} Officers
 
-    %li{:class => params[:action] == "advisor" ? "current" : ""}
-      = link_to "Advisor", :about_advisor
+    = link_to :about_advisor do
+      %li{:class => params[:action] == "advisor" ? "current" : ""} Advisor
 
-    %li{:class => params[:action] == "contact" ? "current" : ""}
-      %a{:href => "#"} Contact Us
+    = link_to :about_index do
+      %li{:class => params[:action] == "contact" ? "current" : ""} Contact Us
 
     %li.page ABOUT
 .content

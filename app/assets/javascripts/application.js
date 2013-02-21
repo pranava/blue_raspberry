@@ -16,11 +16,11 @@
 
 $(document).ready(function() {
   $('.vertically-centered').each(function(index, element) {
-    parent = $(element).parent();
-    height = $(element).height();
-    parentHeight = parent.height();
+    var parent = $(element).parent();
+    var height = $(element).height();
+    var parentHeight = $(parent).height();
 
-    margin = (parentHeight / 2) - (height / 2);
+    var margin = (parentHeight / 2) - (height / 2);
     $(element).css('margin-top', margin);
     $(element).css('margin-bottom', margin);
   });

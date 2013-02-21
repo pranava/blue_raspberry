@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+admin = User.new(
+  first_name: 'Pranava',
+  last_name: 'Adduri',
+  email: 'padduri@berkeley.edu',
+  password: 'tester123',
+  is_administrator: true
+)
+
+admin.face = File.new("test/fixtures/face.png")
+admin.save!

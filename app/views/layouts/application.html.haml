@@ -48,23 +48,38 @@
             %li.main
               = link_to "ABOUT", :about_index
             %li.option
-              %a{:href => "#"} Information
+              = link_to "Information", :about_index
             %li.option
-              %a{:href => "#"} Officers
+              = link_to "Officers", :about_officers
             %li.option
-              %a{:href => "#"} Advisor
+              = link_to "Advisor", :about_advisor
             %li.option
               %a{:href => "#"} Contact
 
-          %ul  
-            %li.main
-              %a{:href => "#"} LOGIN
-            %li.option
-              %a{:href => "#"} Officer
-            %li.option
-              %a{:href => "#"} Sponsor
-            %li.option &nbsp
-            %li.option &nbsp
+          %ul
+            - if user_signed_in?
+              %li.main
+                = link_to current_user.first_name
+              %li.option
+                %a{:href => "#"} Profile
+              %li.option
+                %a{:href => "#"} Settings
+              %li.option
+                = link_to 'Log Out', :destroy_user_session, :method => :delete
+              %li.option
+                - if current_user.is_administrator?
+                  = link_to "Administer", :admin_root
+                - else
+                  &nbsp
+
+            - else  
+              %li.main
+                = link_to "LOGIN", :new_user_session
+              %li.option
+                = link_to "Officer", :new_user_session
+              %li.option &nbsp
+              %li.option &nbsp
+              %li.option &nbsp
       = render "preamble"
 
       .push

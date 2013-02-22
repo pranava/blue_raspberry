@@ -1,0 +1,68 @@
+// Place all the styles related to the Officer controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input.text-field {
+  width: 200px;
+  height: 30px;
+  padding: 0 10px 0 10px;
+  margin: 0px;
+  
+  font-family: inherit;
+  border: 2px solid #98A1AA; 
+}
+
+button.icon {
+  border: 0px;
+  background-color: #98A1AA;
+  color: #FFFFFF;
+  margin-left: -5px;
+  cursor: pointer;
+
+  height: 34px;
+  width: 34px;
+}
+
+span.field-icon {
+  width: 34px;
+  height: 34px;
+  line-height: 35px;
+  display: block;
+
+  margin: 0px;
+  text-align: center;
+  background-color: #98A1AA;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+ul.horizontal-form {
+  display: block;
+  overflow: auto;
+  margin-bottom: 12px;
+
+  li {
+    list-style-type: none;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+form {
+  width: auto;
+
+  .text-button {
+    font-family: 'OpenSansSemibold';
+    border: 0px;
+    background: #FFFFFF;
+    color: #98A1AA;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0px;
+
+    &:hover {
+      color: #2F3337;
+    }
+  }
+}

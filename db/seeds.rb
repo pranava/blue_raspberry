@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 admin = User.new(
-  first_name: 'Pranava',
-  last_name: 'Adduri',
-  email: 'padduri@berkeley.edu',
+  first_name: 'Oski',
+  last_name: 'Bear',
+  email: 'oski@berkeley.edu',
   password: 'tester123',
   is_administrator: true
 )

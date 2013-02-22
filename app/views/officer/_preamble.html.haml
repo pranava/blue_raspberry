@@ -1,0 +1,13 @@
+.hero{:style => "background-image: url(#{image_path "hero/officer.png"})"}
+.submenu
+  %ul
+    = link_to :officer_index do
+      %li{:class => params[:action] == "index" ? "current" : ""} Profile
+
+    = link_to :officer_settings do
+      %li{:class => params[:action] == "settings" ? "current" : ""} Settings
+
+    %li.page
+      = current_user.first_name
+.content
+  = yield

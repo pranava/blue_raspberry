@@ -59,11 +59,11 @@
           %ul
             - if user_signed_in?
               %li.main
-                = link_to current_user.first_name
+                = link_to current_user.first_name, :officer_index
               %li.option
-                %a{:href => "#"} Profile
+                = link_to "Profile", :officer_index
               %li.option
-                %a{:href => "#"} Settings
+                = link_to "Settings", :officer_settings
               %li.option
                 = link_to 'Log Out', :destroy_user_session, :method => :delete
               %li.option
@@ -91,7 +91,7 @@
           %p 2013 UC Berkeley IEEE
         .media.vertically-centered
           %form
-            %input{:placeholder => "Enter email to join our mailing list"}
+            %input.text-field{:placeholder => "Enter email to join our mailing list"}
             %button.icon{:type => "submit"}
               %span.icon-heart{"aria-hidden" => "true"}
           %p No spam. We promise.

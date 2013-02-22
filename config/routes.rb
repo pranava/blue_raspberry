@@ -11,6 +11,11 @@ BlueRaspberry::Application.routes.draw do
     get  '/officers', to: 'about#officers', as: :officers
   end
 
+  scope "/officer", :as => :officer do
+    get  '/', to: 'officer#index', as: :index
+    get  '/settings', to: 'officer#settings', as: :settings
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

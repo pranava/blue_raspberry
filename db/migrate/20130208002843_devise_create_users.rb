@@ -38,12 +38,16 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :last_name
       t.string :biography
       t.integer :graduation_year
+      #t.integer :status
 
       t.attachment :face
       t.timestamps
 
       ## Permissions
       t.boolean :is_administrator, :default => false
+
+      ## References
+      t.references :committee
     end
 
     add_index :users, :email,                :unique => true

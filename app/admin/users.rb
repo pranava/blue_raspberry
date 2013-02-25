@@ -4,17 +4,18 @@ ActiveAdmin.register User do
     column :email
     column :first_name
     column :last_name
+    column :committee
     column :sign_in_count
 
     default_actions
   end
 
-  form do |f|
+  form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs do
       f.input :email
       f.input :first_name
       f.input :last_name
-      f.input :face, :as => :file
+      f.input :face, :as => :file, :hint => f.template.image_tag(f.object.face.url(:original))
       f.input :is_administrator, :as => :boolean
     end
     f.buttons

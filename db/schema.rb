@@ -31,14 +31,15 @@ ActiveRecord::Schema.define(:version => 20130225004037) do
   create_table "committees", :force => true do |t|
     t.string   "name"
     t.string   "description"
+    t.string   "email"
     t.integer  "director_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "",    :null => false
-    t.string   "encrypted_password",     :default => "",    :null => false
+    t.string   "email",                  :default => "",        :null => false
+    t.string   "encrypted_password",     :default => "",        :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -50,13 +51,20 @@ ActiveRecord::Schema.define(:version => 20130225004037) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "biography"
+    t.string   "phone_number"
     t.integer  "graduation_year"
+    t.boolean  "is_alumni",              :default => false
+    t.string   "position",               :default => "Officer"
     t.string   "face_file_name"
     t.string   "face_content_type"
     t.integer  "face_file_size"
     t.datetime "face_updated_at"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
     t.boolean  "is_administrator",       :default => false
     t.integer  "committee_id"
   end

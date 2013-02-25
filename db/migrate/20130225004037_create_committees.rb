@@ -3,6 +3,7 @@ class CreateCommittees < ActiveRecord::Migration
     create_table :committees do |t|
       t.string :name
       t.string :description
+      t.string :email
 
       t.references :director
 

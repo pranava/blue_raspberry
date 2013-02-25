@@ -37,10 +37,13 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :biography
+      t.string :phone_number
       t.integer :graduation_year
-      #t.integer :status
+      t.boolean :is_alumni, :default => false
+      t.string :position, :default => "Officer"
 
       t.attachment :face
+      t.attachment :resume
       t.timestamps
 
       ## Permissions

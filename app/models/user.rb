@@ -9,8 +9,8 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :first_name, :last_name, :biography, :graduation_year, :face
-  attr_accessible :is_administrator
+  attr_accessible :first_name, :last_name, :biography, :graduation_year, :face, :resume, :phone_number, :position, :committee_id
+  attr_accessible :is_alumni, :is_administrator
 
   has_attached_file :face
 end

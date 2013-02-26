@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20130225004037) do
     t.string   "last_name"
     t.string   "biography"
     t.string   "phone_number"
+    t.string   "google_id"
     t.integer  "graduation_year"
     t.boolean  "is_alumni",              :default => false
     t.string   "position",               :default => "Officer"

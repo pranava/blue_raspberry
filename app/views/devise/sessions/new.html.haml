@@ -7,21 +7,26 @@
 
   %br
   %br
-  = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-    %ul.horizontal-form
-      %li
-        %span.field-icon @
-      %li
-        = f.email_field :email, :autofocus => true, :placeholder => "Enter email", :class => "text-field"
- 
-    %ul.horizontal-form
-      %li
-        %span.field-icon #
-      %li
-        = f.password_field :password, :placeholder => "Enter password", :class => "text-field"
 
-    %br
-    %ul.horizontal-form
-      %li
-        = f.submit "LOGIN", :class => "text-button"
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+    .container
+      .input-prepend
+        %span.add-on @
+        = f.email_field :email, :autofocus => true, :placeholder => "Enter email", :class => "text-field"
+      %br
+      .input-prepend
+        %span.add-on #
+        = f.password_field :password, :placeholder => "Enter password", :class => "text-field"
+      %br
+
+      /- if devise_mapping.rememberable?
+      /  %div
+      /    = f.check_box :remember_me
+      /    = f.label :remember_me
+      /    %br
+
+      = f.submit "LOGIN", :class => "text-button"
+      %span.separator
+        |
+      = link_to 'Google', user_omniauth_authorize_path(:google_oauth2), :class => "text-button"
   /= render "devise/shared/links"

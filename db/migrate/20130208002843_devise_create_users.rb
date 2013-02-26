@@ -38,6 +38,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :last_name
       t.string :biography
       t.string :phone_number
+      t.string :google_id
       t.integer :graduation_year
       t.boolean :is_alumni, :default => false
       t.string :position, :default => "Officer"

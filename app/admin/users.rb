@@ -22,6 +22,8 @@ ActiveAdmin.register User do
 
       f.input :face, :as => :file, :hint => f.template.image_tag(f.object.face.url(:original))
       f.input :resume, :as => :file
+
+      f.input :google_id
       f.input :is_alumni, :as => :boolean
       f.input :is_administrator, :as => :boolean
     end

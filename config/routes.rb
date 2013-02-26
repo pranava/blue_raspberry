@@ -1,20 +1,24 @@
 BlueRaspberry::Application.routes.draw do
   ActiveAdmin.routes(self)
 
-  devise_for :users
+  devise_for :users, :controllers => {
+    :omniauth_callbacks => 'users/omniauth_callbacks'
+  }
 
   root :to => 'home#index'
 
-  scope "/about", :as => :about do
+  scope '/about', :as => :about do
     get  '/', to: 'about#index', as: :index
     get  '/advisor', to: 'about#advisor', as: :advisor
     get  '/officers', to: 'about#officers', as: :officers
   end
 
-  scope "/officer", :as => :officer do
+  scope '/officer', :as => :officer do
     get  '/', to: 'officer#index', as: :index
     get  '/settings', to: 'officer#settings', as: :settings
   end
+
+  #resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

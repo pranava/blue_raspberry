@@ -1,0 +1,15 @@
+.left
+  %span.heading.blue Settings
+  %br
+  %br
+
+  /= semantic_form_for current_user do |f|
+  /  = f.inputs do
+  /    = f.input :first_name
+  /    = f.input :last_name
+  /    = f.input :google_id
+  /    /= f.input :categories
+  /    /= f.input :created_at, :as => :string
+  /  = f.actions do
+  /    = f.action :submit, :as => :button
+  /    = f.action :cancel, :as => :link
